@@ -13,7 +13,6 @@ import 'package:args/command_runner.dart';
 
 import 'package:luci/src/cleanup.dart';
 import 'package:luci/src/exceptions.dart';
-import 'package:luci/src/process.dart';
 import 'package:luci/src/workspace.dart';
 import 'package:luci/src/args.dart';
 

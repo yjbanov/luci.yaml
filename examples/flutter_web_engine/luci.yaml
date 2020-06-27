@@ -1,0 +1,381 @@
+name: flutter_web_engine
+dart_sdk_path: _ENV_
+
+targets:
+  host_debug_unopt_linux:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 3
+  canvaskit:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 5
+  host_debug_unopt_windows:
+    agent_profile: windows
+    working_directory: ./
+    command: dart runner.dart 7
+  host_debug_unopt_mac:
+    agent_profile: mac
+    working_directory: ./
+    command: dart runner.dart 5
+  license_check:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 1
+    dependencies:
+      - host_debug_unopt_linux
+  compile_html_tests:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 8
+    dependencies:
+      - host_debug_unopt_linux
+  compile_canvaskit_tests:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 8
+    dependencies:
+      - host_debug_unopt_linux
+      - canvaskit
+  # Linux HTML test targets
+  web_tests_html_linux_1:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_linux
+  web_tests_html_linux_2:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_linux
+  web_tests_html_linux_3:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_linux
+  web_tests_html_linux_4:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_linux
+  web_tests_html_linux_5:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_linux
+  web_tests_html_linux_6:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_linux
+  web_tests_html_linux_7:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_linux
+  web_tests_html_linux_8:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_linux
+  # windows HTML test targets
+  web_tests_html_windows_1:
+    agent_profile: windows
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_windows
+  web_tests_html_windows_2:
+    agent_profile: windows
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_windows
+  web_tests_html_windows_3:
+    agent_profile: windows
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_windows
+  web_tests_html_windows_4:
+    agent_profile: windows
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_windows
+  web_tests_html_windows_5:
+    agent_profile: windows
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_windows
+  web_tests_html_windows_6:
+    agent_profile: windows
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_windows
+  web_tests_html_windows_7:
+    agent_profile: windows
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_windows
+  web_tests_html_windows_8:
+    agent_profile: windows
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_windows
+  # mac HTML test targets
+  web_tests_html_mac_1:
+    agent_profile: mac
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_mac
+  web_tests_html_mac_2:
+    agent_profile: mac
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_mac
+  web_tests_html_mac_3:
+    agent_profile: mac
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_mac
+  web_tests_html_mac_4:
+    agent_profile: mac
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_mac
+  web_tests_html_mac_5:
+    agent_profile: mac
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_mac
+  web_tests_html_mac_6:
+    agent_profile: mac
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_mac
+  web_tests_html_mac_7:
+    agent_profile: mac
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_mac
+  web_tests_html_mac_8:
+    agent_profile: mac
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_html_tests
+      - host_debug_unopt_mac
+  # Linux canvaskit test targets
+  web_tests_canvaskit_linux_1:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_linux
+  web_tests_canvaskit_linux_2:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_linux
+  web_tests_canvaskit_linux_3:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_linux
+  web_tests_canvaskit_linux_4:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_linux
+  web_tests_canvaskit_linux_5:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_linux
+  web_tests_canvaskit_linux_6:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_linux
+  web_tests_canvaskit_linux_7:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_linux
+  web_tests_canvaskit_linux_8:
+    agent_profile: linux
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_linux
+  # windows canvaskit test targets
+  web_tests_canvaskit_windows_1:
+    agent_profile: windows
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_windows
+  web_tests_canvaskit_windows_2:
+    agent_profile: windows
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_windows
+  web_tests_canvaskit_windows_3:
+    agent_profile: windows
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_windows
+  web_tests_canvaskit_windows_4:
+    agent_profile: windows
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_windows
+  web_tests_canvaskit_windows_5:
+    agent_profile: windows
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_windows
+  web_tests_canvaskit_windows_6:
+    agent_profile: windows
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_windows
+  web_tests_canvaskit_windows_7:
+    agent_profile: windows
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_windows
+  web_tests_canvaskit_windows_8:
+    agent_profile: windows
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_windows
+  # mac canvaskit test targets
+  web_tests_canvaskit_mac_1:
+    agent_profile: mac
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_mac
+  web_tests_canvaskit_mac_2:
+    agent_profile: mac
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_mac
+  web_tests_canvaskit_mac_3:
+    agent_profile: mac
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_mac
+  web_tests_canvaskit_mac_4:
+    agent_profile: mac
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_mac
+  web_tests_canvaskit_mac_5:
+    agent_profile: mac
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_mac
+  web_tests_canvaskit_mac_6:
+    agent_profile: mac
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_mac
+  web_tests_canvaskit_mac_7:
+    agent_profile: mac
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_mac
+  web_tests_canvaskit_mac_8:
+    agent_profile: mac
+    working_directory: ./
+    command: dart runner.dart 2
+    dependencies:
+      - compile_canvaskit_tests
+      - host_debug_unopt_mac
