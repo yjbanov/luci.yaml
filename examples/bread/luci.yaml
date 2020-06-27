@@ -1,0 +1,37 @@
+name: bakery
+dart_sdk_path: _ENV_
+
+targets:
+  water:
+    agent_profile: linux
+    working_directory: ./farm
+    command: dart farm.dart water
+  seeds:
+    agent_profile: linux
+    working_directory: ./farm
+    command: dart farm.dart seeds
+  compost:
+    agent_profile: linux
+    working_directory: ./farm
+    command: dart farm.dart compost
+  wheat:
+    agent_profile: linux
+    working_directory: ./farm
+    command: dart farm.dart wheat
+    dependencies:
+      - water
+      - seeds
+      - compost
+  flour:
+    agent_profile: linux
+    working_directory: ./windmill
+    command: dart windmill.dart
+    dependencies:
+      - wheat
+  bread:
+    agent_profile: linux
+    working_directory: ./bakery
+    command: dart bakery.dart
+    dependencies:
+      - water
+      - flour
